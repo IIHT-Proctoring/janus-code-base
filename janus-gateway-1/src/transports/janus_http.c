@@ -691,7 +691,7 @@ int janus_http_init(janus_transport_callbacks *callback, const char *config_path
 			
 			char *tVName = "iiht_b_path";
 			char *tVValue = "all_set";
-			setenv(tVName,tVValue);
+			setenv(tVName,tVValue,1);
 
 			if(strlen(ws_path) > 1 && ws_path[strlen(ws_path)-1] == '/') {
 				/* Remove the trailing slash, it makes things harder when we parse requests later */
