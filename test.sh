@@ -1,0 +1,1 @@
+sed -c -i "s/\(base_path *= *\).*/\1akshay/" test.cfg
