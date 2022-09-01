@@ -1146,21 +1146,6 @@ static int janus_websockets_callback_http(
 }
 /* helper for case where buffer may be const */
 
- static LWS_INLINE int
- lws_write_ws_flags(int initial, int is_start, int is_end)
- {
-         int r;
-  
-         if (is_start)
-                 r = initial;
-         else
-                 r = LWS_WRITE_CONTINUATION;
-  
-         if (!is_end)
-                 r |= LWS_WRITE_NO_FIN;
-  
-         return r;
- }
 static int janus_websockets_callback_https(
 		struct lws *wsi,
 		enum lws_callback_reasons reason,
