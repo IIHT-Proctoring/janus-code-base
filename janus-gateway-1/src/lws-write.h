@@ -34,7 +34,7 @@
  #define _LWS_PAD(n) (((n) % _LWS_PAD_SIZE) ? \
                  ((n) + (_LWS_PAD_SIZE - ((n) % _LWS_PAD_SIZE))) : (n))
  /* last 2 is for lws-meta */
- #define LWS_PRE _LWS_PAD(4 + 10 + 2)
+ //#define LWS_PRE _LWS_PAD(4 + 10 + 2)
  /* used prior to 1.7 and retained for backward compatibility */
  #define LWS_SEND_BUFFER_PRE_PADDING LWS_PRE
  #define LWS_SEND_BUFFER_POST_PADDING 0
@@ -45,31 +45,7 @@
   * NOTE: These public enums are part of the abi.  If you want to add one,
   * add it at where specified so existing users are unaffected.
   */
- enum lws_write_protocol {
-         LWS_WRITE_TEXT                                          = 0,
-         LWS_WRITE_BINARY                                        = 1,
-         LWS_WRITE_CONTINUATION                                  = 2,
-         LWS_WRITE_HTTP                                          = 3,
-         /* LWS_WRITE_CLOSE is handled by lws_close_reason() */
-         LWS_WRITE_PING                                          = 5,
-         LWS_WRITE_PONG                                          = 6,
-  
-         /* Same as write_http but we know this write ends the transaction */
-         LWS_WRITE_HTTP_FINAL                                    = 7,
-  
-         /* HTTP2 */
-  
-         LWS_WRITE_HTTP_HEADERS                                  = 8,
-         LWS_WRITE_HTTP_HEADERS_CONTINUATION                     = 9,
-         /****** add new things just above ---^ ******/
-  
-         /* flags */
-  
-         LWS_WRITE_BUFLIST = 0x20,
-         LWS_WRITE_NO_FIN = 0x40,
-         LWS_WRITE_H2_STREAM_END = 0x80,
-         LWS_WRITE_CLIENT_IGNORE_XOR_MASK = 0x80
- };
+ 
   
  /* used with LWS_CALLBACK_CHILD_WRITE_VIA_PARENT */
   
