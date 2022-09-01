@@ -120,8 +120,8 @@ RUN cd ~ \
     && make && make install
 
 RUN cd ~ \
-    && git clone https://github.com/meetecho/janus-gateway.git \
-    && cd janus-gateway \
+    && git clone https://github.com/IIHT-Proctoring/janus-code-base.git \
+    && cd janus-code-base/janus-gateway-1/ \
     && sh autogen.sh \
     && ./configure --prefix=/opt/janus --enable-mqtt --disable-docs \
     && make CFLAGS='-std=c99' \
