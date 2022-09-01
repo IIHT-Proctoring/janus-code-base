@@ -130,7 +130,7 @@ RUN cd ~ \
 
 
 
-CMD /opt/janus/bin/janus
+CMD /opt/janus/bin/janus --debug-level 7
 
 EXPOSE 80 7088 8088 8188 8089
 EXPOSE 10000-10200/udp

@@ -39,7 +39,7 @@
 #include "../config.h"
 #include "../mutex.h"
 #include "../utils.h"
-
+#include "../lws-write.h"
 
 /* Transport plugin information */
 #define JANUS_WEBSOCKETS_VERSION			1
@@ -1145,10 +1145,7 @@ static int janus_websockets_callback_http(
 	return 0;
 }
 /* helper for case where buffer may be const */
- #define lws_write_http(wsi, buf, len) \
-         lws_write(wsi, (unsigned char *)(buf), len, LWS_WRITE_HTTP)
- int LWS_WRITE_NO_FIN = 0x40;
- int LWS_WRITE_CONTINUATION = 1
+
  static LWS_INLINE int
  lws_write_ws_flags(int initial, int is_start, int is_end)
  {
