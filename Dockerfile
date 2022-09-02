@@ -92,7 +92,7 @@ RUN add-apt-repository ppa:deadsnakes/ppa
 RUN cd ~ \
     && git clone https://github.com/warmcat/libwebsockets.git \
     && cd libwebsockets \
-    && git checkout v2.1.0 \
+    && git checkout v4.2-stable \
     && mkdir build \
     && cd build \
     && cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr .. \

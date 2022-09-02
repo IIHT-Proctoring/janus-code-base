@@ -39,7 +39,7 @@
 #include "../config.h"
 #include "../mutex.h"
 #include "../utils.h"
-#include "../lws-write.h"
+
 
 /* Transport plugin information */
 #define JANUS_WEBSOCKETS_VERSION			1
