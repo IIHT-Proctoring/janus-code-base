@@ -16,7 +16,6 @@ RUN apt-get install -y \
     git \
     libmicrohttpd-dev \
     libjansson-dev \
-    libsrtp2-dev \
     libssl-dev \
     libsofia-sip-ua-dev \
     libglib2.0-dev \
@@ -130,7 +129,7 @@ RUN cd ~ \
 
 
 
-CMD /opt/janus/bin/janus --debug-level 7
+CMD /opt/janus/bin/janus --debug-level 4
 
 EXPOSE 80 7088 8088 8188 8089
 EXPOSE 10000-10200/udp
