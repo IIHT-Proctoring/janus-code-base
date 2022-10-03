@@ -346,7 +346,4 @@ To test whether it's working correctly, you can use the demos provided with this
 ## Documentation
 Janus is thoroughly documented. You can find the current documentation, automatically generated with Doxygen, on the [project website](https://janus.conf.meetecho.com/docs/).
 
-## Help us!
-Any thought, feedback or (hopefully not!) insult is welcome!
 
-Developed by [@meetecho](https://github.com/meetecho)
